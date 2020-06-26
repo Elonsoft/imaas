@@ -1,0 +1,13 @@
+version: '3.7'
+
+services:
+  imaas:
+    build:
+      context: ./imaas
+      args:
+        - "MIX_ENV=${MIX_ENV}"
+    image: imaas
+  caas:
+    build:
+      context: ./caas
+    image: caas
